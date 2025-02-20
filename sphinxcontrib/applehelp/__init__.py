@@ -24,13 +24,11 @@ if TYPE_CHECKING:
 
     from sphinx.application import Sphinx
 
-if sphinx.version_info[:2] >= (6, 1):
-    from sphinx.util.display import SkipProgressMessage, progress_message
-else:
-    from sphinx.util import (  # type: ignore[no-redef]
-        SkipProgressMessage,
-        progress_message,
-    )
+print("### applehelp sphinx.version.info ##")
+print(sphinx.version_info[:2])
+
+from sphinx.util.display import SkipProgressMessage, progress_message
+
 
 __version__ = '2.0.0'
 __version_info__ = (2, 0, 0)
